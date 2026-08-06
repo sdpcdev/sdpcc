@@ -65,23 +65,27 @@ class ClientModuleTaxonomySeeder extends Seeder
     }
 
     /**
-     * Seed the schools students in San Jose Del Monte enrol at.
+     * Seed the schools students enrol at.
+     *
+     * Placeholder institutions and a placeholder city, so a public repository
+     * does not carry a real campus list. Replace with the real values in your
+     * own environment before demoing.
      */
     protected function seedSchools(): void
     {
         $schools = [
-            'STI College San Jose Del Monte',
-            'First City Providential College',
-            'San Jose Del Monte Institute of Technology',
-            'Colegio de San Jose del Monte',
-            'Bulacan State University — Sarmiento Campus',
-            'AMA Computer College — San Jose Del Monte',
+            'City College of Technology',
+            'Northgate Institute of Technology',
+            'Riverside Polytechnic College',
+            'St. Andrew College',
+            'Metro State University — Main Campus',
+            'Central Computer College',
         ];
 
         foreach ($schools as $name) {
             School::updateOrCreate(
                 ['slug' => Str::slug($name)],
-                ['name' => $name, 'city' => 'San Jose Del Monte'],
+                ['name' => $name, 'city' => 'Sample City'],
             );
         }
     }

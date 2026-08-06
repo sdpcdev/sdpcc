@@ -23,7 +23,7 @@ class SchoolFactory extends Factory
         return [
             'name' => $name,
             'slug' => Str::slug($name),
-            'city' => 'San Jose Del Monte',
+            'city' => 'Sample City',
         ];
     }
 }
